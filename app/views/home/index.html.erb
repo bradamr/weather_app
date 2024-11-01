@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "forecast_frame" do %>
-  <h1>Search your Local Forecast</h1>
+  <h1 class="mb-4">Search your Local Forecast</h1>
   <% if flash[:error] %>
     <p><%= flash[:error] %></p>
   <% end %>
@@ -28,5 +28,7 @@
     <% end %>
   </section>
 
-  <div id="forecast-information"></div>
+  <div id="forecast-information">
+    Enter address above and click "Search Forecast" for forecast information.
+  </div>
 <% end %>

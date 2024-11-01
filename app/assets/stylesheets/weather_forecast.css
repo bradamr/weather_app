@@ -1,0 +1,33 @@
+main {
+    font-family: Arial;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    width: 4rem;
+    text-align: right
+}
+
+input[type="submit"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+div {
+    margin-bottom: 0.5rem;
+}
+
+div#forecast-information {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: 1rem;
+}

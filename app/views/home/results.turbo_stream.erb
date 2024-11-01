@@ -1,7 +1,6 @@
 <%= turbo_stream.update "forecast-information" do %>
   <% if @results.present? %>
-    Yes
-    <%= @results %>
+    Results: <%= @results %>
   <% else %>
     There was an error retrieving forecast information, please try again later.
   <% end %>

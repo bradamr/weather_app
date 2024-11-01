@@ -13,4 +13,3 @@
 - run `bundle install` to install gems
 - run `rails db:prepare` to prepare the database (create and run migrations)
 - run `rails s` to start the development server
-- run foreman to compile CSS assets with `foreman start -f Procfile.dev`

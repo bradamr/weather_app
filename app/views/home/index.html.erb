@@ -1,0 +1,32 @@
+<%= turbo_frame_tag "forecast_frame" do %>
+  <h1>Search your Local Forecast</h1>
+  <% if flash[:error] %>
+    <p><%= flash[:error] %></p>
+  <% end %>
+  <section>
+    <%= form_with model: @address, url: results_home_index_path, method: :post,
+      data: { turbo_frame: "forecast_frame" } do |f| %>
+      <div>
+        <%= f.label :street %>
+        <%= f.text_field :street %>
+      </div>
+      <div>
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+      </div>
+      <div>
+        <%= f.label :state %>
+        <%= f.text_field :state, maxlength: 2, length: 5 %>
+      </div>
+      <div>
+        <%= f.label :zip %>
+        <%= f.text_field :zip, maxlength: 5, length: 7 %>
+      </div>
+      <div class="mt-4">
+        <%= f.submit 'Search Forecast' %>
+      </div>
+    <% end %>
+  </section>
+
+  <div id="forecast-information"></div>
+<% end %>
